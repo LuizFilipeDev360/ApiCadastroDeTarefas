@@ -29,17 +29,17 @@ builder.Services.AddSwaggerGen(option =>
             Version = "v1"
         });
 
-        option.AddSecurityDefinition("Bearer ", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+        option.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
         {
             In = Microsoft.OpenApi.Models.ParameterLocation.Header,
             Description = "Insira o token JWT",
             Name = "Authorization",
             Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
             BearerFormat = "JWT",
-            Scheme = "Bearer"
+            Scheme = "bearer"
         });
 
-        option.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+        option.AddSecurityRequirement(new OpenApiSecurityRequirement
         {
             {
                 new OpenApiSecurityScheme
