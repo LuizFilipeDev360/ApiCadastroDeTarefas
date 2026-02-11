@@ -8,9 +8,6 @@ namespace ApiCadastroDeTarefas.Services;
 public class TarefaService
 {
 
-    private static List<Tarefa> _tarefas = new List<Tarefa>();
-    private static int id = 0;
-
     private readonly TarefaRepository _repository;
     private readonly IMapper _mapper;
 
